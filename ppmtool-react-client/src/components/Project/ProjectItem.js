@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class ProjectItem extends Component {
     render() {
@@ -9,7 +10,7 @@ class ProjectItem extends Component {
                     <div className="row">
                         <div className="col-2">
                             <span className="mx-auto">
-                                {project.projectIdentifier}}
+                                {project.projectIdentifier}
                             </span>
                         </div>
                         <div className="col-lg-6 col-md-4 col-8">
@@ -26,14 +27,18 @@ class ProjectItem extends Component {
                                         </i>
                                     </li>
                                 </a>
-                                <a href="#">
+                                <Link
+                                    to={`/updateProject/${
+                                        project.projectIdentifier
+                                    }`}
+                                >
                                     <li className="list-group-item update">
                                         <i className="fa fa-edit pr-1">
                                             {" "}
                                             Update Project Info
                                         </i>
                                     </li>
-                                </a>
+                                </Link>
                                 <a href="">
                                     <li className="list-group-item delete">
                                         <i className="fa fa-minus-circle pr-1">

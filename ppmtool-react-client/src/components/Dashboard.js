@@ -6,7 +6,6 @@ import { getProjects } from "../actions/projectActions";
 import PropTypes from "prop-types";
 
 class Dashboard extends Component {
-    //lsh
     componentDidMount() {
         this.props.getProjects();
     }
@@ -22,9 +21,9 @@ class Dashboard extends Component {
                             <h1 className="display-4 text-center">Projects</h1>
                             <br />
                             <CreateProjectButton />
+
                             <br />
                             <hr />
-
                             {projects.map(project => (
                                 <ProjectItem
                                     key={project.id}
